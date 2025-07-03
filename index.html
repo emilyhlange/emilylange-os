@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Lange OS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet"></head>
+<body>
+
+    <header class="menu-bar">
+        <div class="menu-bar-left">
+            <div class="logo"></div>
+            <nav>
+                <a href="#" id="file-menu-btn"><b>File</b></a>
+                <a href="#">Edit</a>
+                <a href="#">View</a>
+                <a href="#">Go</a>
+                <a href="#">Help</a>
+            </nav>
+        </div>
+        <div class="menu-bar-right">
+            <button id="theme-toggle" class="theme-btn">Dark</button>
+            <div id="clock" class="clock"></div>
+        </div>
+    </header>
+
+    <main id="desktop">
+        <div id="project-alpha-icon" class="icon">
+            <svg class="folder-svg" viewBox="0 0 100 100"><path d="M10,25 v-15 h30 v5 h40 v10 z" fill="#85c1ff" stroke="#4a90e2" stroke-width="2"/><path d="M10,25 h80 v60 h-80 z" fill="#a4d5ff" stroke="#4a90e2" stroke-width="2"/></svg>
+            <span>Project Alpha</span>
+        </div>
+    </main>
+
+    <div id="work-window" class="window hidden">
+        <div class="window-title-bar">
+            <div class="title-bar-buttons">
+                <div class="close"><svg viewBox="0 0 10 10"><path d="M0,0 L10,10 M10,0 L0,10" /></svg></div>
+                <div class="minimize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5" /></svg></div>
+                <div class="maximize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5 M5,0 L5,10" /></svg></div>
+            </div>
+            <div class="window-title">Sample List</div>
+        </div>
+        <div class="window-content">
+             <div class="list-container">
+                <div class="list-row"><div class="list-row-icon blue"></div><div class="list-text"><div class="list-title">Sample Item 1</div><div class="list-subtitle">This window now uses the same style.</div></div></div>
+                <div class="list-row"><div class="list-row-icon green"></div><div class="list-text"><div class="list-title">Sample Item 2</div><div class="list-subtitle">Styling is consistent across windows.</div></div></div>
+            </div>
+        </div>
+        <div class="resizer top-left"></div><div class="resizer top-right"></div><div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+    </div>
+    
+    <div id="about-window" class="window hidden">
+        <div class="window-title-bar">
+             <div class="title-bar-buttons">
+                <div class="close"><svg viewBox="0 0 10 10"><path d="M0,0 L10,10 M10,0 L0,10" /></svg></div>
+                <div class="minimize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5" /></svg></div>
+                <div class="maximize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5 M5,0 L5,10" /></svg></div>
+            </div>
+            <div class="window-title">About This Project</div>
+        </div>
+        <div class="window-content">
+            <p style="padding: 5px;">This project was built collaboratively to create a portfolio that mimics a desktop operating system, inspired by Apple's classic Aqua and modern design principles.</p>
+        </div>
+        <div class="resizer top-left"></div><div class="resizer top-right"></div><div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+    </div>
+
+    <div id="finder-window" class="window hidden">
+        <div class="window-title-bar">
+            <div class="title-bar-buttons">
+                <div class="close"><svg viewBox="0 0 10 10"><path d="M0,0 L10,10 M10,0 L0,10" /></svg></div>
+                <div class="minimize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5" /></svg></div>
+                <div class="maximize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5 M5,0 L5,10" /></svg></div>
+            </div>
+            <div class="window-title">Emily Howkins Lange</div>
+        </div>
+        <div class="cv-body">
+            <div class="cv-header">
+                <div class="cv-photo-card">
+                    <div class="cv-photo-title">Preview</div>
+                    <img src="assets/images/profile.jpg" alt="Emily Howkins Lange">
+                </div>
+                <div class="cv-header-main">
+                    <div class="cv-contact-info">
+                        <h4>Emily Howkins Lange</h4>
+                        <p>emilyhowkinslange@gmail.com</p>
+                        <div class="contact-fields">
+                            <p>+45 61 67 78 89</p>
+                            <p>Bilingual DK/GB</p>
+                        </div>
+                    </div>
+                     <div class="cv-bio-container">
+                        <p class="cv-bio-description">
+                            I am a product designer located in Copenhagen, with a background in User Experience design, specialising in User interfaces and with keen interest in working on <span class="underline">and</span> with Design Systems. I have experience in project and stakeholder management, facilitation and leading design processes of digital products. I have a strong interest in Design Systems, and general UI principles – alongside a strong foundation in user research and UX design methodology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-tabs">
+                <button class="tab-link active" data-tab="experience">Experience</button>
+                <button class="tab-link" data-tab="additional">Additional</button>
+            </div>
+            <div class="cv-tab-content active" id="experience">
+                <div class="content-section">
+                    <div class="section-heading-wrapper">
+                        <h3 class="content-heading">Work</h3>
+                        <div class="social-buttons">
+                            <a href="https://www.linkedin.com/in/emilyhowkinslange/" target="_blank" class="social-btn">LinkedIn</a>
+                            <a href="#" target="_blank" class="social-btn">Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="list-container">
+                        <div class="list-row"><div class="list-row-icon pink"></div><div class="list-text"><div class="list-title">Product designer, Design System</div><div class="list-subtitle">Visma e-conomic</div></div><div class="list-meta">2022 – Current</div></div>
+                        <div class="list-row"><div class="list-row-icon purple"></div><div class="list-text"><div class="list-title">UX Project Lead, Design Matters</div><div class="list-subtitle">Responsible for the design, testing, QA...</div></div><div class="list-meta">2022</div></div>
+                        <div class="list-row"><div class="list-row-icon blue"></div><div class="list-text"><div class="list-title">Freelance Webdesigner</div><div class="list-subtitle">Creation of websites, primarily in Wordpress.</div></div><div class="list-meta">2019–2021</div></div>
+                        <div class="list-row"><div class="list-row-icon yellow"></div><div class="list-text"><div class="list-title">Graphic Designer, ClickLearn</div><div class="list-subtitle">Graphics for conferences, webinars...</div></div><div class="list-meta">2020–2021</div></div>
+                        <div class="list-row"><div class="list-row-icon green"></div><div class="list-text"><div class="list-title">Student Consultant, Digital Sprint</div><div class="list-subtitle">Month-long design sprint; Client: Fødevarerstyrelsen.</div></div><div class="list-meta">2019</div></div>
+                        <div class="list-row"><div class="list-row-icon orange"></div><div class="list-text"><div class="list-title">Concept Developer, Copenhagen Creators</div><div class="list-subtitle">Concept development for a small app-, and game developer.</div></div><div class="list-meta">2017</div></div>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <h3 class="content-heading">Education</h3>
+                    <div class="education-grid">
+                        <div class="education-item"><h4>MSc in Digital Design & Interactive...</h4><p>IT University of Copenhagen · 2019–2021</p></div>
+                        <div class="education-item"><h4>BSc in Digital Media & Design</h4><p>IT University of Copenhagen · 2016–2019</p></div>
+                        <div class="education-item"><h4>Economics & Business Administration...</h4><p>Copenhagen Business School (CBS) · Autumn 2018</p></div>
+                        <div class="education-item"><h4>Computational Media (Exchange...</h4><p>Georgia Institute of Technology (GA, USA) · Spring 2018</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-tab-content" id="additional">
+                <div class="content-section"><h3 class="content-heading">Certificates</h3><div class="list-container"><div class="list-row"><div class="list-text"><div class="list-title">Graphic design, Krabbesholm Højskole</div><div class="list-subtitle">Half a year studying graphic design...</div></div><div class="list-meta">Autumn 2021</div></div><div class="list-row"><div class="list-text"><div class="list-title">Javascript Bootcamp, Barcelona Code School</div><div class="list-subtitle">Intensive 2-week course...</div></div><div class="list-meta">Summer 2019</div></div></div></div>
+                <div class="content-section"><h3 class="content-heading">Volunteering</h3><div class="education-grid"><div class="education-item"><h4>Design Matters</h4><p>Design conference</p><p class="job-meta">Sep 2018</p></div><div class="education-item"><h4>CPH:Dox</h4><p>Cph documentary festival</p><p class="job-meta">2017</p></div></div></div>
+            </div>
+        </div>
+        <div class="resizer top-left"></div><div class="resizer top-right"></div><div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+    </div>
+
+    <div id="project-alpha-window" class="window hidden">
+    <div class="window-title-bar">
+        <div class="title-bar-buttons">
+            <div class="close"><svg viewBox="0 0 10 10"><path d="M0,0 L10,10 M10,0 L0,10" /></svg></div>
+            <div class="minimize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5" /></svg></div>
+            <div class="maximize"><svg viewBox="0 0 10 10"><path d="M0,5 L10,5 M5,0 L5,10" /></svg></div>
+        </div>
+        <div class="window-title">Project Alpha Case Study</div>
+    </div>
+
+    <div class="window-content">
+        <div class="nyt-article">
+            <div class="nyt-header">
+                <h1>A Deep Dive into the User Experience of Project Alpha</h1>
+                <div class="nyt-byline">By EMILY LANGE</div>
+                <div class="nyt-date">Published July 2, 2025</div>
+            </div>
+            <div class="nyt-body">
+                <p><span class="drop-cap">T</span>his case study explores the comprehensive redesign of the user onboarding flow for Project Alpha, a mobile-first application designed for creative professionals. The primary challenge was a significant user drop-off rate of over 60% during the initial setup process. Our goal was to not only reduce this churn but also to create a more engaging and intuitive first-time user experience.</p>
+                <aside class="nyt-pull-quote">
+                    "A guided, step-by-step process that demonstrates value progressively leads to higher completion rates."
+                </aside>
+                <p>The process began with extensive user research, including interviews with both new and churned users, to identify key pain points. We discovered that users felt overwhelmed by the number of choices presented upfront and were unclear about the core value proposition before being asked to commit to a plan. The interface, while functional, lacked a clear visual hierarchy, leading to confusion and frustration.</p>
+            </div>
+        </div>
+    </div>
+    <div class="resizer top-left"></div><div class="resizer top-right"></div><div class="resizer bottom-left"></div><div class="resizer bottom-right"></div>
+    </div>
+    
+    <div id="dialog-window" class="window hidden">
+        <div class="window-title-bar">
+            <div class="title-bar-buttons">
+                <div class="close"></div>
+            </div>
+            <div class="window-title">Save Document</div>
+        </div>
+        <div class="dialog-content">
+            <p>Do you want to save the changes you made?</p>
+            <div class="dialog-buttons">
+                <button class="aqua-button">Don't Save</button>
+                <button class="aqua-button default">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dock">
+        <div id="work-icon" class="icon"><div class="icon-image-placeholder"></div><span>Work</span></div>
+        <div id="about-icon" class="icon"><div class="icon-image-placeholder"></div><span>About Me</span></div>
+        <div id="finder-icon" class="icon">
+            <div class="icon-image-placeholder">
+                <svg viewBox="0 0 60 60"><path d="M20,20 C20,14 26,10 30,10 C34,10 40,14 40,20" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/><path d="M18,35 C22,45 38,45 42,35" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/><circle cx="18" cy="28" r="2"/><circle cx="42" cy="28" r="2"/></svg>
+            </div>
+            <span>Portfolio</span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
