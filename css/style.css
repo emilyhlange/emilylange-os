@@ -141,81 +141,56 @@ body.dark-mode .theme-btn {
     border-color: #222;
 }
 
+/* css/style.css */
+
 /* ========================================================================= */
-/* --- Dock & Icons --- */
+/* --- Desktop Icon Styles --- */
 /* ========================================================================= */
-.dock {
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 200;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 10px;
-    height: 70px;
-    padding: 0 10px 10px 10px;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.2) 51%, rgba(255, 255, 255, 0.15));
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    transition: background-color .3s ease;
-}
-
-body.dark-mode .dock {
-    border-top-color: rgba(255, 255, 255, 0.1);
-}
-
-.dock .icon {
-    width: 60px;
-    height: 60px;
+#desktop {
     position: relative;
-    transition: all 0.1s ease-out;
-}
-
-.dock .icon span {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    white-space: nowrap;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 4px 9px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: 500;
-    opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    pointer-events: none;
-}
-
-.dock .icon:hover span {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-.icon-image-placeholder {
     width: 100%;
     height: 100%;
+}
+
+.desktop-icon {
+    position: absolute; /* Allows positioning anywhere on the desktop */
+    text-align: center;
+    width: 80px;
+    cursor: grab;
+}
+
+.desktop-icon:active {
+    cursor: grabbing;
+}
+
+.desktop-icon .icon-image-placeholder {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 5px;
     border-radius: 8px;
-    background-color: #fff;
 }
 
-#finder-icon .icon-image-placeholder {
-    background-color: #59a6ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Specific icon looks */
+.desktop-icon .folder {
+    background-color: #85c1ff; /* Blue folder color */
 }
 
-#finder-icon svg {
-    width: 38px;
-    height: 38px;
+/* Text label styling */
+.desktop-icon span {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+/* Highlight label on hover */
+.desktop-icon:hover span {
+    background-color: rgba(0, 122, 255, 0.7);
 }
 
 /* ========================================================================= */
@@ -369,25 +344,11 @@ body.dark-mode .title-bar-buttons svg {
 /* ========================================================================= */
 /* --- Default Window Positions & Sizes --- */
 /* ========================================================================= */
-#finder-window {
+#cv-window {
     width: 620px;
     height: 780px;
     top: 40px;
     left: 60px;
-}
-
-#work-window {
-    width: 550px;
-    height: 400px;
-    top: 150px;
-    left: 250px;
-}
-
-#about-window {
-    width: 550px;
-    height: 400px;
-    top: 200px;
-    left: 350px;
 }
 
 /* ========================================================================= */
@@ -771,18 +732,18 @@ body.dark-mode .cv-tab-content::-webkit-scrollbar-track {
 
     /* --- SCROLLING BEHAVIOR FOR NARROW WINDOWS --- */
     /* Make the entire body of the CV scroll together */
-    #finder-window .cv-body {
+    #cv-window .cv-body {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
 
     /* The inner content no longer needs its own scrollbar */
-    #finder-window .cv-tab-content {
+    #cv-window .cv-tab-content {
         overflow-y: visible;
     }
 
     /* Make the tab bar "stick" to the top as you scroll past it */
-    #finder-window .cv-tabs {
+    #cv-window .cv-tabs {
         position: -webkit-sticky;
         position: sticky;
         top: -1px;
@@ -845,14 +806,14 @@ body.dark-mode .cv-tab-content::-webkit-scrollbar-track {
     }
 
     /* Add space for the link */
-    #finder-window .cv-body {
+    #cv-window .cv-body {
         /* This makes the entire CV content area scrollable */
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         /* For smooth scrolling on iOS */
     }
 
-    #finder-window .cv-tab-content {
+    #cv-window .cv-tab-content {
         /* This stops the inner area from creating a second, nested scrollbar */
         overflow-y: visible;
     }
@@ -865,30 +826,31 @@ body.dark-mode .cv-tab-content::-webkit-scrollbar-track {
     height: 100%;
 }
 
-#desktop .icon {
+.desktop-icon {
     position: absolute; /* Allows us to position with top/left */
     text-align: center;
     width: 80px;
-    cursor: grab;
+    cursor: pointer;
 }
 
-#desktop .icon:active {
+.desktop-icon:active {
     cursor: grabbing;
 }
 
-#desktop .icon .icon-image-placeholder {
+.desktop-icon .icon-image-placeholder {
     width: 60px;
     height: 60px;
     margin: 0 auto 5px;
-    background-color: #ffffff;
     border-radius: 8px;
 }
 
-#desktop .icon .folder {
+
+.desktop-icon .folder {
     background-color: #85c1ff; /* Blue folder color */
 }
 
-#desktop .icon span {
+/* Text label styling */
+.desktop-icon span {
     color: white;
     font-size: 12px;
     font-weight: 500;
@@ -897,13 +859,13 @@ body.dark-mode .cv-tab-content::-webkit-scrollbar-track {
     border-radius: 3px;
 }
 
-#desktop .icon:hover span {
+.desktop-icon:hover span {
     background-color: rgba(0, 122, 255, 0.8);
 }
 
 
 /* Give the project window a specific starting size */
-#project-alpha-window {
+#project1-window {
     width: 800px;
     height: 700px;
     top: 80px;
@@ -911,7 +873,7 @@ body.dark-mode .cv-tab-content::-webkit-scrollbar-track {
 }
 
 /* Style the content pane of this specific window to look like a page */
-#project-alpha-window .window-content {
+#project1-window .window-content {
     background: #fdfdfd;
     padding: 25px 35px;
     color: #000; /* Black text for the article */
